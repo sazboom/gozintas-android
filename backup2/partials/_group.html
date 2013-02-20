@@ -1,0 +1,35 @@
+<div class = "question_input">
+    Group Nickname:  <input class="group_nickname" id="group_nickname" type="text" name="group_nickname" style="width:10%; display:inline;">
+</div>
+
+<div class = "question_input">
+     To divide the bill by groups, enter the following information about your group and all other groups. Press “next” to toggle to the next group (then enter new initials). Press next twice to bring up the next screen.
+</div>
+<br/>
+<div class = "question_input">
+    In this group there were 
+    <input class="input_text" id="people_in_group" type="text"  pattern="[0-9]*" name="people_in_group" style="width:10%; display:inline;">
+    people
+</div>
+<div class = "question_input">
+    The group ordered the following extras:<br>
+    <input class = "input_text" id="drinks_deserts_etc" type="number" step = "0.01" name="drinks_deserts_etc" placeholder="0.00" min="0.00" style="width:10%; display:inline;">
+    <label for="drink_deserts_etc" class="label_gaz drink_desert_tip_rate">Drinks/Deserts/Etc (food tip rate)</label>
+</div>
+<div class = "question_input">
+    <input class = "input_text" id="wine_amount" type="number" step = "0.01" name="wine_amount" placeholder="0.00" min="0.00" style="width:10%; display:inline;">
+    <label for="wine_amount" class="label_gaz wine_rate">Wine (alternative tip rate)</label>
+</div>
+<div class = "question_input">
+    <input class = "input_text" id="carry_out_amount" type="number" step = "0.01" name="carry_out_amount" placeholder="0.00" min="0.00" style="width:10%; display:inline;">
+    <label for="carry_out_amount" class="label_gaz takeout_rate">Carry-out</label>
+</div>
+<br>
+<div class = "wording">
+    <h4>This group should have its bill reduced by this amount:</h4>
+</div>
+<br>
+<div class = "question_input">
+    <label class = "input_text_label" for="fair_reduction">Estimate a fair reduction of the group's bill</label>
+    <input class = "input_text" id="fair_reduction" type="number" step = "0.01" name="fair_reduction" placeholder="0.00"><br>
+</div>

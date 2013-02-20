@@ -1,0 +1,18 @@
+.select_gaz{
+    display: inline-block !important;
+    width: 50px;
+}
+
+.div_select_gaz{
+    display: inline-block !important;
+}
+.label_gaz{
+    display: inline-block !important;
+}
+
+.hidden{
+	display:none;
+}
+
+.visible{
+}

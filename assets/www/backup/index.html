@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name = "format-detection" content = "telephone=no"/>
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width;" />
+        <link rel="stylesheet" type="text/css" href="css/jquery-mobile.css" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+
+
+        <title>Gozintas</title>
+        <script type="text/javascript" src="cordova-2.2.0.js"></script>
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/jquery.mobile-1.2.0.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/Gozintas.js"></script>
+        <script type="text/javascript" src="js/page.js"></script>
+        <script type="text/javascript" src="js/partial.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+    </head>
+    <body>
+        <div data-role="page" id="page0" data-routing="page0.html">
+            <div data-role="header" class="header-home">
+                <h1><a onclick ="returnHome(true);">
+                        Gozintas
+                    </a>
+                </h1>
+                <a class="ui-btn-right ui-btn ui-shadow ui-btn-corner-all ui-btn-icon-right ui-btn-up-a" data-icon="gear" href="#settings" data-theme="a" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span">
+                <span class="ui-btn-inner ui-btn-corner-all">
+                <span class="ui-btn-text">Settings</span>
+                <span class="ui-icon ui-icon-gear ui-icon-shadow"> </span>
+                </span>
+                </a>
+            </div>
+            <h3><center>Welcome to Gozintas. What would you like to do?</center></h3>
+            <div class="menu">
+                <a href="#page1" data-role="button" onclick="Gozintas.splitBillPath()" data-transition="fade">Split Bill</a>
+                <a href="#page1" data-role="button" onclick="Gozintas.determineTipPath()" data-transition="fade">Determine Tip</a>
+            </div>
+        </div>
+
+        <div data-role="page" id="page1" data-add-back-btn="true" data-routing="page1.html" data-pagejs="page1" class="page-bg">       
+        </div>
+
+        <div data-role="page" id="page2" data-add-back-btn="true" data-routing="page2.html" data-pagejs="page2" class="page-bg">
+        </div>
+
+        <div data-role="page" id="page2b" data-add-back-btn="true" data-routing="page2b.html" data-pagejs="page2b" class="page-bg">
+        </div>
+
+        <div data-role="page" id="page3" data-add-back-btn="true" data-routing="page3.html" data-pagejs="page3" class="page-bg">
+        </div>
+
+        <div data-role="page" id="page4" data-add-back-btn="true" data-routing="page4.html" data-pagejs="page4" class="page-bg">
+
+        </div>
+
+        <div data-role="page" id="page4b" data-add-back-btn="true" data-routing="page4b.html" data-pagejs="page4b" class="page-bg">
+        </div>
+
+        <div data-role="page" id="extras" data-add-back-btn="true" data-routing="extras.html" data-pagejs="extras" class="page-bg">
+        </div>
+
+        <div data-role="page" id="settings" data-add-back-btn="true" data-routing="settings.html" data-pagejs="settings" class="page-bg">
+        </div>
+
+    </body>
+</html>

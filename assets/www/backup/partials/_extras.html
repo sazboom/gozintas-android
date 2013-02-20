@@ -1,0 +1,29 @@
+<div data-role="header">
+    <h1>Gozintas</h1>
+    <a class="ui-btn-right ui-btn ui-shadow ui-btn-corner-all ui-btn-icon-right ui-btn-up-a" data-icon="gear" href="#settings" data-theme="a" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span">
+    <span class="ui-btn-inner ui-btn-corner-all">
+    <span class="ui-btn-text">Settings</span>
+    <span class="ui-icon ui-icon-gear ui-icon-shadow"> </span>
+    </span>
+    </a>
+</div>
+<div class = "background-page">
+    <div class = "inner-page">
+        <div class = "question_input">
+            You're ordering extras on your bill. Extras can be things like carry-out food, or drinks, that might have tip rates that differ from normal<br>
+            <a href="#" data-role="button" onclick="addExtra()" data-inline="true" data-icon="plus">Add Extra</a>
+            <a href="#" data-role="button" onclick="removeExtra()" data-inline="true" data-icon="minus">Remove Extra</a>
+            <br>
+            <input class = "input_text" id="wine_amount" type="number" step = "0.01" name="wine_amount" placeholder="0.00" min="0.00" style="width:10%; display:inline;">
+            <label for="wine_amount" class="label_gaz wine_rate">Wine Total (alternative tip rate)</label>
+        </div>
+        <div class = "question_input">
+            <input class = "input_text" id="carry_out_amount" type="number" step = "0.01" name="carry_out_amount" placeholder="0.00" min="0.00" style="width:10%; display:inline;">
+            <label for="carry_out_amount" class="label_gaz takeout_rate">Carry-out Total (0% tip rate)</label>
+        </div>
+
+        <div class="buttons">
+            <a href="#page3" data-role="button">Next</a>
+        </div>
+    </div>
+</div>

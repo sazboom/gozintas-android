@@ -1,0 +1,24 @@
+<div data-role="header">
+    <h1>Gozintas</h1>
+</div>
+<h3><center>Please enter the receipt details below</center></h3>
+<div class="menu">
+    <div class = "question_input">
+        <label class = "input_text_label" for="total_amount">What is the total amount of the bill?</label>
+        <input class = "input_text" id="total_amount_input" type="number" step = "0.01" name="total_amount" placeholder="0.00" min="0.00"><br>
+     </div>
+     <div class = "question_input">
+        <label class = "input_text_label" for="tax_amount">What is the amount of tax shown on the bill?</label><br>
+        <input class = "input_text" id="total_tax_amount_input" type="number" step = "0.01" name="tax_amount" placeholder="0.00" min="0.00">
+    </div>
+    <div class="buttons">
+        <div class="links-split" style="display:none;">
+            <a href ="#page3b" data-role="button" onclick="Gozintas.splitByIndividual()">Split Individually</a>
+            <a href = "#page3" data-role="button" onclick="Gozintas.splitByGroup()">Split as Group</a>
+        </div>
+        <div class="links-tip" style="display:none;">
+            <a href = "#page4" data-role="button" onclick="Gozintas.splitByIndividual()">Next</a>   
+        </div>
+    </div>
+
+</div>

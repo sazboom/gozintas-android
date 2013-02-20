@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name = "format-detection" content = "telephone=no"/>
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width;" />
+        <link rel="stylesheet" type="text/css" href="css/jquery-mobile.css" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+
+
+        <title>Gozintas</title>
+        <script type="text/javascript" src="cordova-2.2.0.js"></script>
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/jquery.mobile-1.2.0.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/Gozintas.js"></script>
+        <script type="text/javascript" src="js/page.js"></script>
+        <script type="text/javascript" src="js/partial.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+    </head>
+    <body>
+
+        <div data-role="page" id="page1" data-add-back-btn="true" data-routing="page1.html" data-pagejs="page1" class="page-bg">
+            <div data-role="header" class="header-home">
+                <h1><a onclick ="returnHome(true);">
+                        Gozintas
+                    </a>
+                </h1>
+                <a class="ui-btn-right ui-btn ui-shadow ui-btn-corner-all ui-btn-icon-right ui-btn-up-a" data-icon="gear" href="#settings" data-theme="a" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span">
+                <span class="ui-btn-inner ui-btn-corner-all">
+                <span class="ui-btn-text">Settings</span>
+                <span class="ui-icon ui-icon-gear ui-icon-shadow"> </span>
+                </span>
+                </a>
+            </div>
+            <div class = "tabs-top">
+                <div class="split-bill">
+                    <a href="#page1" onclick="Gozintas.splitBillPath()">
+                        <div class="paper-icon"></div>
+                        <div class="text-tab">Split Bill</div>
+                    </a>
+                </div>
+                <div class="determine-tip">
+                    <a href="#page1" onclick="Gozintas.determineTipPath()">
+                        <div class="percent-icon"></div>
+                        <div class="text-tab">Determine Tip</div>
+                    </a>
+                </div>
+            </div>
+            <div class = "background-page">
+                <div class = "inner-page">
+                    <h3><center>Please enter the receipt details below</center></h3>
+                    <div class="menu">
+                        <div class = "question_input">
+                            <label class = "input_text_label" for="total_amount">What is the total amount of the bill?</label>
+                            <input class = "input_text" id="total_amount_input" type="number" step = "0.01" name="total_amount" placeholder="0.00" min="0.00"><br>
+                         </div>
+                         <div class = "question_input">
+                            <label class = "input_text_label" for="tax_amount">What is the amount of tax shown on the bill?</label><br>
+                            <input class = "input_text" id="total_tax_amount_input" type="number" step = "0.01" name="tax_amount" placeholder="0.00" min="0.00">
+                        </div>
+                        <div class="buttons">
+                            <div class="links-split" style="display:none;">
+                                <a href ="#page2b" data-role="button" onclick="Gozintas.splitByIndividual()">Split Individually</a>
+                                <a href = "#page2" data-role="button" onclick="Gozintas.splitByGroup()" style="width:50%;float:left;">Split as ...</a>
+
+                                <div id = "number_of_groups" style="width:49%;float:right;">
+                                    <div class="div_select_group_num" style="width:100%;">
+                                        <select class="select_group_num" id="group_num" name="group_num" data-inline="true" data-routing="group-num.html"></select> 
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="links-tip" style="display:none;">
+                                <a href = "#page3" data-role="button" onclick="Gozintas.splitByIndividual()">Next</a>   
+                            </div>
+                        </div>
+                        <div style="clear:both;"></div>
+
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                Gozintas.numGroups = parseInt($("#page1 #group_num").val());
+                Gozintas.total.amount = parseFloat($("#page1 #total_amount_input").val()).toFixed(2)
+                Gozintas.total.taxAmount = parseFloat($("#page1 #total_tax_amount_input").val()).toFixed(2)
+                Gozintas.showSplitTipButtons(); 
+                if( (parseFloat(Gozintas.total.taxAmount) > parseFloat(Gozintas.total.amount)) || (Gozintas.total.amount ==0 ) || Gozintas.total.amount < 0 || Gozintas.total.taxAmount < 0){
+                    $(".buttons").children().addClass('ui-disabled');
+                }else{
+                    $(".buttons").children().removeClass('ui-disabled');
+                }
+            </script>
+        </div>
+
+        <div data-role="page" id="page2" data-add-back-btn="true" data-routing="page2.html" data-pagejs="page2" class="page-bg">
+        </div>
+
+        <div data-role="page" id="page2b" data-add-back-btn="true" data-routing="page2b.html" data-pagejs="page2b" class="page-bg">
+        </div>
+
+        <div data-role="page" id="page3" data-add-back-btn="true" data-routing="page3.html" data-pagejs="page3" class="page-bg">
+        </div>
+
+        <div data-role="page" id="page4" data-add-back-btn="true" data-routing="page4.html" data-pagejs="page4" class="page-bg">
+
+        </div>
+
+        <div data-role="page" id="page4b" data-add-back-btn="true" data-routing="page4b.html" data-pagejs="page4b" class="page-bg">
+        </div>
+
+        <div data-role="page" id="extras" data-add-back-btn="true" data-routing="extras.html" data-pagejs="extras" class="page-bg">
+        </div>
+
+        <div data-role="page" id="settings" data-add-back-btn="true" data-routing="settings.html" data-pagejs="settings" class="page-bg">
+        </div>
+
+    </body>
+</html>

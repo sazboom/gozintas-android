@@ -1,0 +1,53 @@
+<div data-role="header" class="header-home">
+    <h1><a onclick ="returnHome(true);">
+            Gozintas
+        </a>
+    </h1>
+    <a class="ui-btn-right ui-btn ui-shadow ui-btn-corner-all ui-btn-icon-right ui-btn-up-a" data-icon="gear" href="#settings" data-theme="a" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span">
+    <span class="ui-btn-inner ui-btn-corner-all">
+    <span class="ui-btn-text">Settings</span>
+    <span class="ui-icon ui-icon-gear ui-icon-shadow"> </span>
+    </span>
+    </a>
+</div>
+<!--<div class = "tabs-top">
+    <div class="split-bill">
+        <a href="#split-bill">
+            <div class="paper-icon"></div>
+            <div class="text-tab">Split Bill</div>
+        </a>
+    </div>
+    <div class="determine-tip">
+        <a href="#determine-tip">
+            <div class="percent-icon"></div>
+            <div class="text-tab">Determine Tip</div>
+        </a>
+    </div>
+</div>-->
+<div class = "background-page">
+    <div class = "inner-page">
+        <h3><center>To divide the bill evenly, enter the total number of people in your party</center></h3>
+        <div class ="menu">
+            <div class = "question_input">
+                <label class = "input_text_label" for="people_in_party">People in party</label> 
+                <input class="input_text" id="people_in_party" type="text"  pattern="[0-9]*" name="people_in_party" >
+            </div>
+
+        	<div class = "question_input">
+        	    <input class = "input_text" id="drinks_deserts_etc" type="number" step = "0.01" name="drinks_deserts_etc" placeholder="0.00" min="0.00" style="width:10%; display:inline;" disabled="">
+        	    <label for="drink_deserts_etc" class="label_gaz drink_desert_tip_rate">Bill Total (food tip rate)</label>
+        	</div>
+
+            <div class="extras-bubble-wrapper">
+                <div class = "question_input extras-bubble">
+                    <p>Your bill will be split evenly among the people in your party with the base tip and tax tip rates applied.</p>
+                    <a href="#extras" data-role="button">I ordered extras on my bill.</a>
+                </div>
+            </div>
+
+            <div class="buttons">
+            	<a href="#page3" data-role="button">Next</a>
+        	</div>
+        </div>
+    </div>
+</div>

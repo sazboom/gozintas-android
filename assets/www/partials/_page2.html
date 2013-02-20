@@ -1,0 +1,50 @@
+<div data-role="header" class="header-home">
+    <h1><a onclick ="returnHome(true);">
+            Gozintas
+        </a>
+    </h1>
+    <a class="ui-btn-right ui-btn ui-shadow ui-btn-corner-all ui-btn-icon-right ui-btn-up-a" data-icon="gear" href="#settings" data-theme="a" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span">
+    <span class="ui-btn-inner ui-btn-corner-all">
+    <span class="ui-btn-text">Settings</span>
+    <span class="ui-icon ui-icon-gear ui-icon-shadow"> </span>
+    </span>
+    </a>
+</div>
+<!--<div class = "tabs-top">
+    <div class="split-bill">
+        <a href="#split-bill">
+            <div class="paper-icon"></div>
+            <div class="text-tab">Split Bill</div>
+        </a>
+    </div>
+    <div class="determine-tip">
+        <a href="#determine-tip">
+            <div class="percent-icon"></div>
+            <div class="text-tab">Determine Tip</div>
+        </a>
+    </div>
+</div>-->
+<div class = "background-page">
+    <div class = "inner-page">
+        <div class ="menu">
+            <div class = "question_input">
+                <a href="#" data-role="button" onclick="addGroup()" data-inline="true" data-icon="plus">Add Group</a>
+                <a href="#" data-role="button" onclick="removeGroup()" data-inline="true" data-icon="minus">Remove Group</a>
+            </div>
+            <div class="groups">
+                <div id="topgroup-1-container" class="group-container">
+                    <div data-role="collapsible" data-content-theme="c" id="group-1" data-theme="a" class="group-1 visible" data-routing="group.html" style = "width: 70%; float: left">
+                        <h3>Group 1</h3>
+                    </div>
+                    <a href="#" data-transition="pop" data-role="button" data-inline="true" style="float: left; width: 29%;" data-icon="gear" data-theme="b" data-rel="popup" onclick="$('#extra-popup-1').popup('open')">Extras</a>
+                    <div data-role="popup" id="extra-popup-1" class="extra-popup" data-routing="extras.html">
+                    </div>
+                </div>
+            </div>
+            <br clear="both">
+            <div class="buttons">
+                <a href="#page3" data-role="button">Next</a>
+            </div>
+        </div>
+    </div>
+</div>
