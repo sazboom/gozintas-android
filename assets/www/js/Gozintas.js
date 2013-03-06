@@ -294,7 +294,14 @@ var Gozintas = {
 		Gozintas.tip.wine = 0.15;
 		Gozintas.tip.carryout = 0.15;
 		Gozintas.tip.tax = 0.15;
-		groups = [new Group()];
+
+		group_size_to_delete = $("#page2 .group-container").size()
+		for(var i = 0; i < group_size_to_delete; i++){
+			$("#page2 .group-container").remove();
+		}
+		delete groups;
+		addGroup();
+
 	},
 
 	showPageFiveGroupInputs: function(group_number){
@@ -357,6 +364,7 @@ var Gozintas = {
 		            	store = "groups["+(groupNum-1)+"]."+value["attribute"]+" = "+input
 		            }else if(value["input"] == "money"){
 		            	input = $(parentClass+value["id"]).val()
+
 		            	if(input.length == 0){ 
 		            		input = 0
 		            		bool = "groups["+(groupNum-1)+"]."+value["bool"]+" = false"
@@ -391,5 +399,11 @@ var Gozintas = {
 	        	});
 			});
 		}
+	},
+
+	clearEntry:  function(){
+		console.log($(this).attr("class"));
 	}
+
+
 }

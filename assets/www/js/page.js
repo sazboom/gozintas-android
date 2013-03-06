@@ -82,6 +82,17 @@ var Page = {
                 }
             });
 
+            $("#page2 .extra-popup .close_button").live('click', function(){
+                cssGroup = $(this).parent().parent().attr("id");
+                inputGroup = "#"+cssGroup +" input";
+                console.log(inputGroup);
+                var clearGroupNum = parseInt(cssGroup.split("").reverse().join("")[0])-1;
+                $(inputGroup).val("");
+                groups[clearGroupNum].foodTotal = 0;
+                groups[clearGroupNum].wineTotal = 0;
+                groups[clearGroupNum].carryOutTotal = 0;
+            });
+
 
             $("#page2").live('pageload',function(){
 

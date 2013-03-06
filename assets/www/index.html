@@ -13,7 +13,7 @@
         <script type="text/javascript" src="js/jquery.js"></script>
         <script type="text/javascript" src="js/jquery.mobile-1.2.0.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript" src="js/Gozintas.js"></script>
+        <script type="text/javascript" src="js/gozintas.js"></script>
         <script type="text/javascript" src="js/page.js"></script>
         <script type="text/javascript" src="js/partial.js"></script>
         <script type="text/javascript">
@@ -51,13 +51,13 @@
             </div>
             <div class = "background-page">
                 <div class = "inner-page">
-                    <h3><center>Please enter the receipt details below</center></h3>
+                    <h3 class="toptext"><center>Please enter the receipt details below</center></h3>
                     <div class="menu">
-                        <div class = "question_input">
+                        <div class = "question_input total_amount_input">
                             <label class = "input_text_label" for="total_amount">What is the total amount of the bill?</label>
                             <input class = "input_text" id="total_amount_input" type="number" step = "0.01" name="total_amount" placeholder="0.00" min="0.00"><br>
                          </div>
-                         <div class = "question_input">
+                         <div class = "question_input total_tax_amount_input">
                             <label class = "input_text_label" for="tax_amount">What is the amount of tax shown on the bill?</label><br>
                             <input class = "input_text" id="total_tax_amount_input" type="number" step = "0.01" name="tax_amount" placeholder="0.00" min="0.00">
                         </div>
@@ -66,7 +66,7 @@
                                 <a href ="#page2b" data-role="button" onclick="Gozintas.splitByIndividual()">Split Individually</a>
                                 <a href = "#page2" data-role="button" onclick="Gozintas.splitByGroup()" style="width:50%;float:left;">Split as ...</a>
 
-                                <div id = "number_of_groups" style="width:49%;float:right;">
+                                <div id = "number_of_groups" style="width:47%;float:right; margin-right: 1%;">
                                     <div class="div_select_group_num" style="width:100%;">
                                         <select class="select_group_num" id="group_num" name="group_num" data-inline="true" data-routing="group-num.html"></select> 
                                     </div>

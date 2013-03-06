@@ -27,16 +27,16 @@
 <div class = "background-page">
     <div class = "inner-page">
         <div class ="menu">
-            <div class = "question_input">
-                <a href="#" data-role="button" onclick="addGroup()" data-inline="true" data-icon="plus">Add Group</a>
-                <a href="#" data-role="button" onclick="removeGroup()" data-inline="true" data-icon="minus">Remove Group</a>
+            <div class = "add_remove_group">
+                <a href="#" data-role="button" onclick="addGroup()" data-icon="plus" class="add_group" data-theme="b">Add Group</a>
+                <a href="#" data-role="button" onclick="removeGroup()" data-icon="minus" class="remove_group" data-theme="b">Remove Group</a>
             </div>
             <div class="groups">
                 <div id="topgroup-1-container" class="group-container">
-                    <div data-role="collapsible" data-content-theme="c" id="group-1" data-theme="a" class="group-1 visible" data-routing="group.html" style = "width: 70%; float: left">
+                    <div data-role="collapsible" data-content-theme="c" id="group-1" data-theme="a" class="group-1 visible" data-routing="group.html" style = "width: 77%; float: left">
                         <h3>Group 1</h3>
                     </div>
-                    <a href="#" data-transition="pop" data-role="button" data-inline="true" style="float: left; width: 29%;" data-icon="gear" data-theme="b" data-rel="popup" onclick="$('#extra-popup-1').popup('open')">Extras</a>
+                    <a href="#" data-transition="pop" data-role="button" data-inline="true" style="float: left; width: 20%; height: 40px;" data-icon="gear" data-theme="b" data-rel="popup" onclick="$('#extra-popup-1').popup('open')"></a>
                     <div data-role="popup" id="extra-popup-1" class="extra-popup" data-routing="extras.html">
                     </div>
                 </div>
